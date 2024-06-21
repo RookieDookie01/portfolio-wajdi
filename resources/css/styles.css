@@ -13,11 +13,9 @@
 *{
     font-family: Trebuchet MS;
     color: #272422;
-}
-
-body,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -43,19 +41,54 @@ h5 {
 }
 
 h6 {
-	font-size: 16px;
+	font-size: 70px;
+}
+
+p {
+    font-size: 20px;
 }
 
 body{
     background-color:  #f6f7f8;
 }
 
-.container {
+.section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: lightblue; /* Set default background color */
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+.section:nth-child(1) { background: #161819; }
+.section:nth-child(2) { background: #161819; }
+.section:nth-child(3) { background: #161819; }
+.section:nth-child(4) { background: #161819; }
+
+#ready-section,#intro-section, #about-me-section{
+    display: grid;
+    place-items: center;
+    align-content: center;
     height: 100vh;
 }
 
-#about-me-section{
+#intro-section{
 
+}
+
+#about-me-section{
+    
 }
 
 footer {
