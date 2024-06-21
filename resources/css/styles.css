@@ -8,10 +8,56 @@
 /* Designo Mystic Blue = #1d3b51*/
 /* Designo Patagonia Red Metallic =  #6c2528*/
 
+
+
+*{
+    font-family: Trebuchet MS;
+    color: #272422;
+}
+
+body,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #0a2a3b;
+    font-family: Palatino;
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
 body{
-    background-color:  #CFAE70;
+    background-color:  #f6f7f8;
 }
 
 .container {
-    
+    height: 100vh;
+}
+
+#about-me-section{
+
+}
+
+footer {
+    text-align: center;
 }
