@@ -143,6 +143,7 @@ audio {
 
 .explore h4{
     margin-left:  214px;
+    border-bottom: 1px solid #CFAE70;
 }
 
 .explore ul{
@@ -152,8 +153,8 @@ audio {
 
 .explore li{
     text-decoration: none;
-    padding-top: 5px;
     position: relative;
+    border-bottom: 1px solid #CFAE70;
 }
 
 .explore a {
@@ -165,7 +166,7 @@ audio {
     box-sizing: border-box;
     padding: 25px 10px;
     cursor: pointer;
-    border-radius: 7px;
+    border-radius: 3px;
 }
 
 .explore a::before {
