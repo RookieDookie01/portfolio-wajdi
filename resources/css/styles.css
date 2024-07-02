@@ -87,21 +87,59 @@ audio {
 .section:nth-child(3) { background: #f6f7f8; }
 .section:nth-child(4) { background: #f6f7f8; }
 
-#intro-section-1, #intro-section-2, #about-me-section-3, .explore{
+.intro-section-1, .intro-section-2, .about-me-section-3, .explore{
     display: grid;
     place-items: center;
     align-content: center;
     height: 100dvh;
 }
 
-.about-me p {
-    margin-right: 20px;
+.profile-pic-1, .profile-pic-2 {
+    height: 400px;
+    border-radius: 7px;
+    box-shadow:  5px 5px 8px #272422;
 }
 
-.profile-pic {
-    height: 400px;
-    border-radius: 10px;
+.about-me-1 .content {
+    height: 100dvh;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding-right: 500px;
 }
+
+.about-me-1 p {
+    margin: 0;
+    padding-right: 20px;
+    width: 600px;
+    line-height: 1.5;
+    font-size: 23px;
+}
+
+.profile-pic-1 {
+    margin-right: 50px;
+}
+
+.about-me-2 .content {
+    height: 100dvh;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding-right: 500px;
+}
+
+.about-me-2 p {
+    margin: 0;
+    padding-right: 20px;
+    width: 600px;
+    line-height: 1.5;
+    font-size: 23px;
+}
+
+.profile-pic-2 {
+    margin-right: 50px;
+}
+
 
 .explore h4{
     margin-left:  214px;
@@ -141,12 +179,13 @@ audio {
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.05, 1.6, 0.4, 0.7);
     transform: scaleX(0);
-    background-color: #CFAE70; 
+    background-color: #6c2528; 
     z-index: -1; 
 }
 
 .explore a:hover {
-    font-style: italic; /* Set the font to italic on hover */
+    font-style: italic; 
+    color: #CFAE70;
 }
 
 .explore a:hover::before{
