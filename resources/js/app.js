@@ -10,6 +10,13 @@
 
 // const hiddenElement = document.querySelectorAll('.hidden');
 // hiddenElement.forEach((el) => obeserver.observe(el));
+document.addEventListener('DOMContentLoaded', function () {
+    var audio = document.getElementById('background-music');
+    audio.volume = 0.2; // Set volume to 20%
+    audio.play().catch(function(error) {
+    console.log('Autoplay prevented:', error);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
