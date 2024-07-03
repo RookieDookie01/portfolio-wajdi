@@ -42,3 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showSection(currentSectionIndex);
     window.addEventListener('wheel', handleScroll);
 });
+

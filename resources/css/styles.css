@@ -100,7 +100,7 @@ audio {
     box-shadow:  5px 5px 8px #272422;
 }
 
-.about-me-1 .content {
+.about-me-1 .content, .about-me-2 .content {
     height: 100dvh;
     display: flex; 
     align-items: center; 
@@ -108,7 +108,7 @@ audio {
     padding-right: 500px;
 }
 
-.about-me-1 p {
+.about-me-1 p, .about-me-2 p {
     margin: 0;
     padding-right: 20px;
     width: 600px;
@@ -116,33 +116,12 @@ audio {
     font-size: 23px;
 }
 
-.profile-pic-1 {
+.profile-pic-1, .profile-pic-2 {
     margin-right: 50px;
 }
-
-.about-me-2 .content {
-    height: 100dvh;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding-right: 500px;
-}
-
-.about-me-2 p {
-    margin: 0;
-    padding-right: 20px;
-    width: 600px;
-    line-height: 1.5;
-    font-size: 23px;
-}
-
-.profile-pic-2 {
-    margin-right: 50px;
-}
-
 
 .explore h4{
-    margin-left:  214px;
+    margin-left:  74px;
     border-bottom: 1px solid #CFAE70;
 }
 
@@ -162,7 +141,7 @@ audio {
     font-size: 40px;
     text-decoration: none;
     position: relative;
-    width: 1500px; 
+    width: 1400px; 
     box-sizing: border-box;
     padding: 25px 10px;
     cursor: pointer;
