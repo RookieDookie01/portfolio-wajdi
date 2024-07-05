@@ -14,22 +14,32 @@
     overflow-x: hidden;
 }
 
+:root {
+    --light-bg-color: #f6f7f8;
+    --light-text-color: #272422;
+    --light-a-color: #272422;
+    --light-hover-color: #6c2528;
+
+    --dark-bg-color: #272422;
+    --dark-text-color: #f6f7f8;
+    --dark-a-color: #f6f7f8;
+    --dark-hover-color: #0a2a3b;
+}
+
 html, body {
     font-family: Trebuchet MS;
-    background-color: var(--bg-color);
-    color: var(--text-color);
     transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
-
-:root {
-    --bg-color: #f6f7f8;
-    --text-color: #272422;
+.light {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
 }
 
-body.dark {
-    --bg-color: #292c35;
-    --text-color: #f6f7f8;
+.dark {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
 }
 
 h1 {
@@ -37,6 +47,11 @@ h1 {
     font-family: Palatino;
     font-size: 60px;
 }
+
+.dark h1 {
+    color:#CFAE70
+}
+
 
 h2 {
     font-size: 40px;
@@ -63,31 +78,15 @@ p {
 }
 
 .container {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-}
-
-.intro-section-1 button {
-    background-color: #6c2528;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.intro-section-1 button:hover {
-    background-color: #0a2a3b;
+    scroll-snap-type: y mandatory;
+    height: 100dvh;
 }
 
 .explore {
     position: relative;
 }
 
-.section-1 {
+/* .section-1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -100,6 +99,14 @@ p {
 
 .section-1.visible {
     opacity: 1;
+} */
+
+.section {
+    height: 100vh; 
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-section-1, .intro-section-2, .about-me-section-3, .explore {
@@ -107,6 +114,7 @@ p {
     place-items: center;
     align-content: center;
     height: 100dvh;
+    width: 100dvw;
 }
 
 .profile-pic-1, .profile-pic-2 {
@@ -115,10 +123,15 @@ p {
     box-shadow: 5px 5px 8px #272422;
 }
 
+.dark .profile-pic-1, .profile-pic-2 {
+    box-shadow: 5px 5px 8px black;
+}
+
 .about-me-1 .content, .about-me-2 .content {
-    height: 100vh;
     display: flex;
     place-items: center;
+    height: 100vh;
+    width: 100dvw;
 }
 
 .about-me-1 p, .about-me-2 p {
@@ -134,13 +147,15 @@ p {
 
 
 .explore h4 {
-    margin-left: 74px;
+    margin-left: 10dvw;
     border-bottom: 1px solid #CFAE70;
 }
 
 .explore ul {
+    margin-left: 20dvw;
+    margin-right: 20dvw;
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: 0;
 }
 
 .explore li {
@@ -150,16 +165,23 @@ p {
 }
 
 .explore a {
-    color: #272422;
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
     display: block;
     font-size: 40px;
     text-decoration: none;
     position: relative;
-    width: 1400px; 
+    width: 80dvw; 
     box-sizing: border-box;
-    padding: 25px 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+.dark .explore a {
+    color: var(--dark-text-color);
 }
 
 .explore a::before {
@@ -173,11 +195,17 @@ p {
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.05, 1.6, 0.4, 0.7);
     transform: scaleX(0);
-    background-color: #6c2528; 
+    background-color: var(--light-hover-color); 
     z-index: -1; 
 }
 
+
 .explore a:hover {
+    font-style: italic; 
+    color: #CFAE70;
+}
+
+.dark .explore a:hover {
     font-style: italic; 
     color: #CFAE70;
 }
@@ -185,6 +213,8 @@ p {
 .explore a:hover::before {
     transform: scaleX(1);
 }
+
+/* Dark mode specific styles */
 
 footer {
     text-align: center;
