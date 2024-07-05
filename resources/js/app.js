@@ -1,18 +1,5 @@
-// const obeserver = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('show');
-//         } else {
-//             entry.target.classList.remove('show');
-//         }
-//     });
-// });
-
-// const hiddenElement = document.querySelectorAll('.hidden');
-// hiddenElement.forEach((el) => obeserver.observe(el));
-
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.section-1');
     let currentSectionIndex = 0;
     let isTransitioning = false;
 
@@ -41,5 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showSection(currentSectionIndex);
     window.addEventListener('wheel', handleScroll);
-});
 
+    // Dark mode toggle
+    const toggleButton = document.getElementById('toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark');
+    });
+});
