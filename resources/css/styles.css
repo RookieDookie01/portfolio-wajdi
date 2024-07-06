@@ -12,6 +12,7 @@
     margin: 0 auto;
     padding: 0 auto;
     overflow-x: hidden;
+    transition: background-color 0.3s ease;
 }
 
 :root {
@@ -28,7 +29,6 @@
 
 html, body {
     font-family: Trebuchet MS;
-    transition: background-color 0.3s ease;
     overflow: hidden;
 }
 
@@ -77,14 +77,23 @@ p {
     font-size: 20px;
 }
 
+nav {
+    position: fixed;
+    top: 2dvh;
+    right: 2dvw;
+}
+
+
+
+.intro-section-1 button {
+    margin-top: 0dvh;
+}
+
 .container {
     scroll-snap-type: y mandatory;
     height: 100dvh;
 }
 
-.explore {
-    position: relative;
-}
 
 /* .section-1 {
     position: fixed;
@@ -115,15 +124,18 @@ p {
     width: 100dvw;
 }
 
-.profile-pic-1, .profile-pic-2 {
+.profile-pic {
     height: 400px;
+    width: auto;
     border-radius: 7px;
-    margin-left: 30dvw;
-    box-shadow: 5px 5px 8px #272422;
+    margin-left: 20dvw;
+    /* box-shadow: 5px 5px 8px #272422; */
+    background-color: #f6f7f8;
 }
 
-.dark .profile-pic-1, .profile-pic-2 {
-    box-shadow: 5px 5px 8px black;
+.dark .profile-pic {
+    /* box-shadow: 5px 5px 8px black; */
+    background-color: #272422;
 }
 
 .about-me-1 .content, .about-me-2 .content {
@@ -134,14 +146,9 @@ p {
 .about-me-1 p, .about-me-2 p {
     line-height: 1.5;
     font-size: 23px;
-    margin-left: 30px;
+    margin-left: 5dvw;
     margin-right: 20dvw;
 }
-
-.profile-pic-1, .profile-pic-2 {
-    margin-right: 10px;
-}
-
 
 .explore h4 {
     margin-left: 10dvw;

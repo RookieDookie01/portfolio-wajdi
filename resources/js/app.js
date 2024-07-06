@@ -29,25 +29,29 @@
 // window.addEventListener('wheel', handleScroll);
 
 
-let modeBtn = document.querySelector("#mode");
-let body = document.querySelector("body");
-let currentMode = "light";
+document.addEventListener("DOMContentLoaded", () => {
+    const modeBtn = document.getElementById("mode");
+    const body = document.body;
+    let currentMode = "light";
 
-modeBtn.addEventListener("click", () => {
-    if(currentMode === "light"){
-        currentMode = "dark";
-        body.classList.add("dark");
-        body.classList.remove("light");
+    // Function to toggle night mode
+    function toggleNightMode() {
+        if (currentMode === "light") {
+            currentMode = "dark";
+            body.classList.add("dark");
+            body.classList.remove("light");
+            modeBtn.textContent = "Day Mode";
+        } else {
+            currentMode = "light";
+            body.classList.add("light");
+            body.classList.remove("dark");
+            modeBtn.textContent = "Night Mode";
+        }
+        console.log(currentMode);
     }
-    else{
-        currentMode = "light";
-        body.classList.add("light")
-        body.classList.remove("dark")
-    }
-    console.log(currentMode);
-}); 
 
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-    document.body.classList.toggle("dark")
-})
+    // Event listener for mode button click
+    modeBtn.addEventListener("click", () => {
+        toggleNightMode();
+    });
+});
