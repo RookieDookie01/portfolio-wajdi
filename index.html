@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wajdi's Portfolio</title>
     <link rel="stylesheet" href="./resources/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+NL:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <button id="mode">Night Mode</button>
+        <button id="mode">
+            <i class="fas fa-sun"></i> <!-- Initially, this will be the sun icon -->
+            <i class="fas fa-moon" style="display:none;"></i> <!-- Hidden moon icon -->
+        </button>
     </nav>
     <div class="container">
         <section class="section intro-section-1">
-            <h1>Ashraf Wajdi's Portfolio</h1>
-            <h3>This portfolio is <strong>created from scratch</strong> by TheGr8Wajdi.<b> No template template</b>. (I'm serious (✦ ‿ ✦))</h3>
-            <h3>(This portfolio is still in progress and not finished yet due to current university's commitment)</h3>
+            <h1><span class="highlight">Ashraf Wajdi's</span>
+                <span>Portfolio</span></h1>
+            <h3>This portfolio is still in progress and not finished yet due to current university's commitment (✦ ‿ ✦)</h3>
         </section>
-        <section class="section intro-section-2">
+        <!-- <section class="section intro-section-2">
             <h5>بسم الله الرحمن الرحيم</h5>
             <h3>In the name of God, Most Gracious, Most Merciful</h3>
-        </section>
+        </section> -->
         <section class="section about-me-1">
             <div class="content">
                 <img class="profile-pic" src="./resources/images/me/batman.png">
@@ -38,7 +42,7 @@
         </section>
         <section class="section about-me-2">
             <div class="content">
-                <img class="profile-pic" src="./resources/images/me/me2.png">
+                <img class="profile-pic" src="./resources/images/me/me2.jpg">
                 <p>
                     So why <strong>front-end? </strong><i>Long short story ~</i><br>
                     Back when I was 5, <br>

@@ -7,6 +7,7 @@
 /* Designo Ocean Blue Metallic =  #0a2a3b*/
 /* Designo Mystic Blue = #1d3b51*/
 /* Designo Patagonia Red Metallic =  #6c2528*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 * {
     margin: 0 auto;
@@ -18,13 +19,13 @@
 :root {
     --light-bg-color: #f6f7f8;
     --light-text-color: #272422;
-    --light-a-color: #272422;
-    --light-hover-color: #6c2528;
 
     --dark-bg-color: #272422;
     --dark-text-color: #f6f7f8;
-    --dark-a-color: #f6f7f8;
-    --dark-hover-color: #0a2a3b;
+
+    --gold-metallic: #CFAE70;
+    --patagonia-red: #6c2528;
+    --ocean-blue: #0a2a3b;
 }
 
 html, body {
@@ -43,17 +44,67 @@ html, body {
     color: var(--dark-text-color);
 }
 
+#mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; 
+    color: var(--light-text-color); 
+    transition: color 0.3s ease;
+}
+
+#mode:hover {
+    color: var(--gold-metallic); 
+}
+
+.dark #mode {
+    color: var(--dark-text-color);
+}
+
+.dark #mode:hover {
+    color: var(--gold-metallic); 
+}
+
+.intro-section-1 h1 {
+    color: var(--light-bg-color);
+    text-shadow: 
+        1px 1px 0 var(--ocean-blue), 
+        -1px 1px 0 var(--ocean-blue), 
+        1px -1px 0 var(--ocean-blue), 
+        -1px -1px 0 var(--ocean-blue);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 7em;
+    line-height: 1;
+    padding: 0.2em 0;
+    margin: 0;
+    transition: color 0.1s ease, text-shadow 0.3s ease;
+}
+
+.intro-section-1 h1:hover .highlight {
+    color: var(--ocean-blue);
+    text-shadow: none;
+    transition: color 0.1s ease, text-shadow 0.3s ease;
+}
+
+.dark .intro-section-1 h1 {
+    color: var(--dark-bg-color);
+    text-shadow: 
+        1px 1px 0 var(--gold-metallic), 
+        -1px 1px 0 var(--gold-metallic), 
+        1px -1px 0 var(--gold-metallic), 
+        -1px -1px 0 var(--gold-metallic);
+}
+
+.dark .intro-section-1 h1:hover .highlight {
+    color: var(--gold-metallic);
+    text-shadow: none;
+}
+
 h1 {
-    color: #0a2a3b;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 600;
-    font-size: 5em;
+    font-size: 60px;
 }
-
-.dark h1 {
-    color:#CFAE70
-}
-
 
 h2 {
     font-size: 40px;
@@ -103,21 +154,6 @@ nav {
     display: grid;
     place-items: center;
     align-content: center;
-
-
-
-    /* position: fixed;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out; */
-}
-
-/* .section.visible {
-    opacity: 1;
-} */
-
-.intro-section-1, .intro-section-2, .about-me-section-3, .explore {
-    height: 100dvh;
-    width: 100dvw;
 }
 
 .profile-pic {
@@ -179,6 +215,7 @@ nav {
     padding-left: 10px;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 1;
 }
 
 .dark .explore a {
@@ -196,7 +233,7 @@ nav {
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.05, 1.6, 0.4, 0.7);
     transform: scaleX(0);
-    background-color: var(--light-hover-color); 
+    background-color: var(--patagonia-red); 
     z-index: -1; 
 }
 
