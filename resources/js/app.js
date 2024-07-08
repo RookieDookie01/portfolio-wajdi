@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modeBtn.querySelector(".fa-sun").style.display = "inline";
             modeBtn.querySelector(".fa-moon").style.display = "none";
         }
-        console.log(mode); // Check if this logs correctly
+        console.log(mode); 
     }
 
     function toggleNightMode() {
@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     modeBtn.addEventListener("click", () => {
         toggleNightMode();
     });
-
-    // Apply the mode on page load
     applyMode(currentMode);
+
+    // curtain
+    setTimeout(function() {
+        document.querySelector('.curtain.top').classList.add('expand');
+        document.querySelector('.curtain.bottom').classList.add('expand');
+    }, 100);
 });
