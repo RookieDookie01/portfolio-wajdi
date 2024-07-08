@@ -9,13 +9,6 @@
 /* Designo Patagonia Red Metallic =  #6c2528*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-* {
-    margin: 0 auto;
-    padding: 0 auto;
-    overflow-x: hidden;
-    transition: background-color 0.3s ease;
-}
-
 :root {
     --light-bg-color: #f6f7f8;
     --light-text-color: #272422;
@@ -28,12 +21,6 @@
     --ocean-blue: #0a2a3b;
 }
 
-html, body {
-    font-family: "Trebuchet MS", sans-serif;
-    overflow: hidden;
-    background-color: var(--light-bg-color);
-}
-
 .light {
     background-color: var(--light-bg-color);
     color: var(--light-text-color);
@@ -44,62 +31,17 @@ html, body {
     color: var(--dark-text-color);
 }
 
-#mode {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px; 
-    color: var(--light-text-color); 
-    transition: color 0.3s ease;
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
 }
 
-#mode:hover {
-    color: var(--gold-metallic); 
-}
-
-.dark #mode {
-    color: var(--dark-text-color);
-}
-
-.dark #mode:hover {
-    color: var(--gold-metallic); 
-}
-
-.intro-section-1 h1 {
-    color: var(--light-bg-color);
-    text-shadow: 
-        1px 1px 0 var(--ocean-blue), 
-        -1px 1px 0 var(--ocean-blue), 
-        1px -1px 0 var(--ocean-blue), 
-        -1px -1px 0 var(--ocean-blue);
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 7em;
-    line-height: 1;
-    padding: 0.2em 0;
-    margin: 0;
-    transition: color 0.1s ease, text-shadow 0.3s ease;
-}
-
-.intro-section-1 h1:hover .highlight {
-    color: var(--ocean-blue);
-    text-shadow: none;
-    transition: color 0.1s ease, text-shadow 0.3s ease;
-}
-
-.dark .intro-section-1 h1 {
-    color: var(--dark-bg-color);
-    text-shadow: 
-        1px 1px 0 var(--gold-metallic), 
-        -1px 1px 0 var(--gold-metallic), 
-        1px -1px 0 var(--gold-metallic), 
-        -1px -1px 0 var(--gold-metallic);
-}
-
-.dark .intro-section-1 h1:hover .highlight {
-    color: var(--gold-metallic);
-    text-shadow: none;
+html, body {
+    font-family: "Trebuchet MS", sans-serif;
+    overflow: hidden;
+    background-color: var(--light-bg-color);
 }
 
 h1 {
@@ -130,18 +72,6 @@ p {
     font-size: 20px;
 }
 
-nav {
-    position: fixed;
-    top: 2dvh;
-    right: 2dvw;
-}
-
-
-
-.intro-section-1 button {
-    margin-top: 0dvh;
-}
-
 .container {
     scroll-snap-type: y mandatory;
     height: 100dvh;
@@ -151,9 +81,114 @@ nav {
     height: 100dvh;
     width: 100dvw;
     scroll-snap-align: start;
+}
+
+.about-me-1, .bismillah, .about-me-2, .about-me-section-3, .venture {
     display: grid;
     place-items: center;
     align-content: center;
+}
+
+nav #mode{
+    position: fixed;
+    top: 2dvh;
+    right: 2dvw;
+}
+
+nav #back{
+    position: fixed;
+    top: 0.4dvh;
+    left: 1.5dvw;
+}
+
+#mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; 
+    color: var(--light-text-color); 
+    transition: color 0.3s ease;
+}
+
+#mode:hover {
+    color: var(--gold-metallic); 
+}
+
+.dark #mode {
+    color: var(--dark-text-color);
+}
+
+.dark #mode:hover {
+    color: var(--gold-metallic); 
+}
+
+#back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 34px;
+    padding: 0;
+}
+
+#back a {
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+#back a:hover {
+    color: var(--gold-metallic);
+    text-decoration: none;
+}
+
+.dark #back a {
+    color: var(--dark-text-color);
+}
+
+.dark #back a:hover {
+    color: var(--gold-metallic); 
+}
+
+.intro-section-1 {
+    align-content: center;
+    padding-left: 10dvw;
+}
+
+.intro-section-1 h1 {
+    color: var(--light-bg-color);
+    text-shadow: 
+        1px 1px 0 var(--ocean-blue), 
+        -1px 1px 0 var(--ocean-blue), 
+        1px -1px 0 var(--ocean-blue), 
+        -1px -1px 0 var(--ocean-blue);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10em;
+    line-height: 1;
+    padding: 0.2em 0;
+    margin: 0;
+    transition: color 0.1s ease, text-shadow 0.3s ease;
+}
+
+.intro-section-1 h1:hover .highlight {
+    color: var(--ocean-blue);
+    text-shadow: none;
+    transition: color 0.1s ease, text-shadow 0.3s ease;
+}
+
+.dark .intro-section-1 h1 {
+    color: var(--dark-bg-color);
+    text-shadow: 
+        1px 1px 0 var(--gold-metallic), 
+        -1px 1px 0 var(--gold-metallic), 
+        1px -1px 0 var(--gold-metallic), 
+        -1px -1px 0 var(--gold-metallic);
+}
+
+.dark .intro-section-1 h1:hover .highlight {
+    color: var(--gold-metallic);
+    text-shadow: none;
 }
 
 .profile-pic {
@@ -161,8 +196,12 @@ nav {
     width: auto;
     border-radius: 7px;
     margin-left: 20dvw;
-    /* box-shadow: 5px 5px 8px #272422; */
     background-color: #f6f7f8;
+    filter: grayscale(100%) brightness(100%);
+}
+
+.content:hover .profile-pic {
+    filter: grayscale(0%) brightness(100%);
 }
 
 .dark .profile-pic {
@@ -183,25 +222,26 @@ nav {
     text-align: justify;
 }
 
-.explore h4 {
+.venture h4 {
     margin-left: 10dvw;
     border-bottom: 1px solid #CFAE70;
+    padding-bottom: 1px;
 }
 
-.explore ul {
+.venture ul {
     margin-left: 20dvw;
     margin-right: 20dvw;
     list-style-type: none;
     padding-left: 0;
 }
 
-.explore li {
+.venture li {
     text-decoration: none;
     position: relative;
     border-bottom: 1px solid #CFAE70;
 }
 
-.explore a {
+.venture a {
     color: var(--light-text-color);
     transition: color 0.3s ease;
     display: block;
@@ -218,11 +258,11 @@ nav {
     z-index: 1;
 }
 
-.dark .explore a {
+.dark .venture a {
     color: var(--dark-text-color);
 }
 
-.explore a::before {
+.venture a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -238,17 +278,17 @@ nav {
 }
 
 
-.explore a:hover {
+.venture a:hover {
     font-style: italic; 
     color: #CFAE70; 
 }
 
-.dark .explore a:hover {
+.dark .venture a:hover {
     font-style: italic; 
     color: #CFAE70;
 }
 
-.explore a:hover::before {
+.venture a:hover::before {
     transform: scaleX(1);
 }
 
@@ -258,108 +298,111 @@ footer {
     text-align: center;
 }
 
-/* 
-@media only screen and (max-width: 767px) {
+/* Mobile devices (up to 600px) */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #f0f0f0;
+        font-size: 16px;
+    }
+
     h1 {
-        font-size: 40px;
+        font-size: 2em;
+        text-align: left;
     }
-    h2 {
-        font-size: 30px;
-    }
+
     p {
+        padding: 10px;
+        line-height: 1.5;
+    }
+
+    .intro-section-1 {
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .intro-section-1 h1 {
+        font-size: 4em;
+    }
+}
+
+/* Tablet devices (601px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        background-color: #e0e0e0;
         font-size: 18px;
     }
-    .profile-pic-1, .profile-pic-2 {
-        height: 200px;
+
+    h1 {
+        font-size: 3em;
+        text-align: left;
     }
-    .about-me-1 .content, .about-me-2 .content {
-        padding-right: 20px;
-        flex-direction: column;
-        align-items: center;
+
+    p {
+        padding: 15px;
+        line-height: 1.6;
     }
-    .about-me-1 p, .about-me-2 p {
-        width: 90%;
-        padding-right: 0;
-        text-align: center;
+
+    .intro-section-1 {
+        display: block;
+        text-align: left;
+        padding: 30px;
     }
-    .explore a {
-        font-size: 20px;
-        width: 90%;
-        padding: 15px 5px;
+
+    .intro-section-1 h1 {
+        font-size: 5em;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* Laptop devices (901px to 1200px) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+
     h1 {
-        font-size: 50px;
+        font-size: 4em;
+        text-align: left;
     }
-    h2 {
-        font-size: 35px;
-    }
+
     p {
-        font-size: 19px;
+        padding: 20px;
+        line-height: 1.8;
     }
-    .profile-pic-1, .profile-pic-2 {
-        height: 300px;
+
+    .intro-section-1 {
+        display: block;
+        text-align: left;
+        padding: 40px;
     }
-    .about-me-1 .content, .about-me-2 .content {
-        padding-right: 50px;
-    }
-    .about-me-1 p, .about-me-2 p {
-        width: 80%;
-    }
-    .explore a {
-        font-size: 30px;
-        width: 95%;
+
+    .intro-section-1 h1 {
+        font-size: 6em;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+/* Desktop devices (1201px and above) */
+@media only screen and (min-width: 1201px) {
+    body {
+        font-size: 22px;
+    }
+
     h1 {
-        font-size: 55px;
+        font-size: 10em;
     }
-    h2 {
-        font-size: 37px;
-    }
+
     p {
-        font-size: 20px;
+        padding: 25px;
+        line-height: 2;
     }
-    .profile-pic-1, .profile-pic-2 {
-        height: 350px;
+
+    .intro-section-1 {
+        display: block;
+        text-align: left;
     }
-    .about-me-1 .content, .about-me-2 .content {
-        padding-right: 100px;
-    }
-    .about-me-1 p, .about-me-2 p {
-        width: 75%;
-    }
-    .explore a {
-        font-size: 35px;
-        width: 97%;
+
+    .intro-section-1 h1 {
+        font-size: 7em;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    h1 {
-        font-size: 60px;
-    }
-    h2 {
-        font-size: 40px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .profile-pic-1, .profile-pic-2 {
-        height: 400px;
-    }
-    .about-me-1 .content, .about-me-2 .content {
-        padding-right: 500px;
-    }
-    .about-me-1 p, .about-me-2 p {
-        width: 600px;
-    }
-    .explore a {
-        font-size: 40px;
-        width: 1400px;
-    }
-} */
