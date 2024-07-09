@@ -330,8 +330,8 @@ nav #back{
     position: relative;
     width: 80dvw; 
     box-sizing: border-box;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 10px;
     cursor: pointer;
     border-radius: 5px;
