@@ -83,7 +83,7 @@ p {
     height: 50vh; 
     background-color: var(--black-metallic); 
     z-index: 1000;
-    transition: height 1s ease; 
+    transition: height 0.35s ease; 
 }
 
 .curtain.top {
@@ -101,6 +101,14 @@ p {
 .curtain.expand.bottom {
     height: 0; 
     bottom: 0; 
+}
+
+.curtain.close.top {
+    height: 50vh;
+}
+
+.curtain.close.bottom {
+    height: 50vh;
 }
 
 .container {
@@ -332,10 +340,35 @@ nav #back{
     transform: scaleX(1);
 }
 
-/* Dark mode specific styles */
-
 footer {
-    text-align: center;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+footer p {
+    position: relative;
+    padding: 0;
+    padding-top: 1dvh;
+    background: linear-gradient(to left, var(--light-text-color) 50%, var(--gold-metallic) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.1s linear;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
+
+.dark footer p {
+    background: linear-gradient(to left, var(--dark-text-color) 50%, var(--gold-metallic) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
+
+footer:hover p {
+    background-position: 0 0;
 }
 
 /* Mobile devices (up to 600px) */
