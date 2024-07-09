@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Holtz Co. Replica</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #5000FF;
+        color: white;
+    }
+    
+    .container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+    }
+    
+    .logo {
+        font-weight: bold;
+    }
+    
+    .info {
+        font-size: 0.8em;
+    }
+    
+    .menu {
+        text-align: right;
+    }
+    
+    .text-block {
+        grid-column: 2 / 4;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .text {
+        font-size: 4em;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .social {
+        align-self: end;
+    }
+    
+    .footer {
+        grid-column: 3;
+        text-align: right;
+        align-self: end;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">VAN HOLTZ CO.</div>
+        <div class="info">
+            <p>Studio of Eric Van Holtz</p>
+            <p>Web Developer</p>
+            <p>Portland Oregon</p>
+            <p>hello@vanholtz.co</p>
+        </div>
+        <div class="menu">
+            <div>01 about</div>
+            <div>02 journal</div>
+        </div>
+        <div class="text-block">
+            <div class="text" data-text="STUDIO">STUDIO</div>
+            <div class="text" data-text="MEGA">MEGA</div>
+            <div class="text" data-text="THE">THE</div>
+            <div class="text" data-text="BRIGADE">BRIGADE</div>
+            <div class="text" data-text="PUSH">PUSH</div>
+            <div class="text" data-text="ONX">ONX</div>
+            <div class="text" data-text="MAB">MAB</div>
+        </div>
+        <div class="social">
+            <div>03 twitter</div>
+            <div>04 instagram</div>
+            <div>05 linkedin</div>
+        </div>
+        <div class="footer">design feint</div>
+    </div>
+    <script>
+        document.querySelectorAll('.text').forEach(element => {
+            element.addEventListener('mouseover', () => {
+                element.style.color = '#5000FF';
+                element.style.webkitTextStroke = '1px white';
+            });
+        
+            element.addEventListener('mouseout', () => {
+                element.style.color = 'white';
+                element.style.webkitTextStroke = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -84,6 +84,38 @@ p {
     background-color: var(--black-metallic); 
     z-index: 1000;
     transition: height 0.35s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.curtain::before {
+    content: "thegr8wjdi";
+    position: absolute;
+    color: var(--black-metallic);
+    text-shadow: 
+        1px 1px 0 var(--dark-text-color), 
+        -1px 1px 0 var(--dark-text-color), 
+        1px -1px 0 var(--dark-text-color), 
+        -1px -1px 0 var(--dark-text-color);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5em;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.curtain.top::before {
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.curtain.bottom::before {
+    top: 0;
+    transform: translateY(-50%);
 }
 
 .curtain.top {
@@ -236,7 +268,11 @@ nav #back{
     border-radius: 7px;
     margin-left: 20dvw;
     background-color: #f6f7f8;
-    filter: grayscale(100%) brightness(100%);
+    filter: grayscale(50%) brightness(100%);
+}
+
+.dark .profile-pic {
+    background-color: var(--dark-bg-color);
 }
 
 .content:hover .profile-pic {
@@ -254,10 +290,6 @@ nav #back{
     color: var(--gold-metallic);
 }
 
-.dark .profile-pic {
-    background-color: #272422;
-}
-
 .about-me-1 .content, .about-me-2 .content {
     display: flex;
     place-items: center;
@@ -269,12 +301,6 @@ nav #back{
     margin-left: 5dvw;
     margin-right: 20dvw;
     text-align: justify;
-}
-
-.venture h4 {
-    margin-left: 10dvw;
-    border-bottom: 1px solid #CFAE70;
-    padding-bottom: 1px;
 }
 
 .venture ul {
@@ -290,11 +316,16 @@ nav #back{
     border-bottom: 1px solid #CFAE70;
 }
 
+.venture li:first-child {
+    border-top: 1px solid #CFAE70;
+}
+
+
 .venture a {
-    color: var(--light-text-color);
-    transition: color 0.3s ease;
+    color: var(--light-bg-color);
+    font-family: "Bebas Neue", sans-serif;
     display: block;
-    font-size: 40px;
+    font-size: 3em;
     text-decoration: none;
     position: relative;
     width: 80dvw; 
@@ -304,14 +335,25 @@ nav #back{
     padding-left: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: color 0.3s ease, text-shadow 0.1s ease;
     z-index: 1;
+    text-shadow: 
+        1px 1px 0 var(--ocean-blue), 
+        -1px 1px 0 var(--ocean-blue), 
+        1px -1px 0 var(--ocean-blue), 
+        -1px -1px 0 var(--ocean-blue);
 }
 
 .dark .venture a {
-    color: var(--dark-text-color);
+    color: var(--dark-bg-color);
+    text-shadow: 
+        1px 1px 0 var(--gold-metallic), 
+        -1px 1px 0 var(--gold-metallic), 
+        1px -1px 0 var(--gold-metallic), 
+        -1px -1px 0 var(--gold-metallic);
 }
 
-.venture a::before {
+/* .venture a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -322,17 +364,21 @@ nav #back{
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.05, 1.6, 0.4, 0.7);
     transform: scaleX(0);
-    background-color: var(--patagonia-red); 
+    background-color: var(--ocean-blue); 
     z-index: -1; 
 }
 
+.dark .venture a::before {
+    background-color: var(--); 
+} */
+
 .venture a:hover {
-    font-style: italic; 
-    color: #CFAE70; 
+    color: var(--ocean-blue);
+    font-size: 4em;
+    text-shadow: none;
 }
 
 .dark .venture a:hover {
-    font-style: italic; 
     color: #CFAE70;
 }
 
