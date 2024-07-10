@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.querySelector('.curtain.top').classList.add('expand');
         document.querySelector('.curtain.bottom').classList.add('expand');
-    }, 200);
+    }, 300);
 
     // Attach event listeners to all .next-page links
     document.querySelectorAll('.next-page').forEach(link => {
